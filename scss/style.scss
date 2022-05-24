@@ -1,0 +1,11 @@
+//base 
+@use "./base/reset";
+@use "./base/variables";
+@use "./base/base";
+
+// blocks
+
+@use "./blocks/main";
+@use "./blocks/responsive";
+
+

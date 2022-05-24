@@ -1,0 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Syne+Tactile&family=Ubuntu&display=swap");
+$blue: #1875f0;
+$text_zaglowki: #04163a;
+$text: #666666;
+$text_link:#010b4d;
+
+%mixin-card {
+  box-shadow: 0 0px 25px rgba(255, 255, 255, 0.858);
+  border-radius: 6px;
+  background-color: #ffffffd0;
+}
