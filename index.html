@@ -1,37 +1,47 @@
 <!DOCTYPE html>
 <html lang="pl">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width" />
-    <link rel="stylesheet" href="css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css" />
     <title>Pogoda</title>
-</head>
-<body class="sun">
+  </head>
+  <body class="weather">
     <div class="dark-background">
-<main >
-    <section class="zaglowek">
-        <h2>Pogoda</h2>
-        <div class="zaglowek-right">
-          <div class="zaglowek-item">
-            <a href="#">Twoja miejsowość</a>
+      <main>
+        <section class="zaglowek">
+          <h2>Pogoda</h2>
+          <div class="zaglowek-right">
+            <div class="zaglowek-item">
+              <p>Twoja miejsowość</p>
+            </div>
+            <img class="zaglowek-img" src="assets/icons/gonext.svg" alt=">>" />
+            <div class="zaglowek-item">
+              <select class="select" id="weatherCity">
+                <option disabled selected>Wybierz miasto</option>
+              </select>
+            </div>
           </div>
-          <img class="zaglowek-img" src="assets/icons/gonext.svg" alt=">>" />
-          <div class="zaglowek-item">
-            <select id="weatherCity">
-                <option value="">Wybierz miasto</option>
-            </select>
+        </section>
+        <section class="content-main">
+          <div class="flex">
+            <div class="block">
+              <h2>
+                Sprawdź jaka pogoda teraz w: <br>
+                <img
+                  class="miasto-img"
+                  src="assets/icons/miasto.png"
+                  alt="Miasto"
+                />
+                <h2 class="h2"></h2>
+              </h2>
+            </div>
           </div>
-        </div>
-      </section>
-      <section class="content-main">
-       <div class="flex"></div>
-      </section>
-   
-</main>
-</div>
-
-
+        </section>
+      </main>
+    </div>
+    <script src="js/ip.js"></script>
     <script src="js/scripts.js"></script>
-</body>
+  </body>
 </html>

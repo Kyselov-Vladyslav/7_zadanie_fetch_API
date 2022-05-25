@@ -1,11 +1,14 @@
 @media screen and (max-width: 1070px) {
   .zaglowek {
-    height: 80px;
+    height: 100px;
     padding: 20px 10px;
     width: 80%;
     }
     h2 {
       font-size: 35px;
+    }
+    p{
+      font-size: 20px;
     }
   
     .zaglowek-right {
@@ -28,12 +31,15 @@
 }
 @media screen and (max-width: 992px) {
   .zaglowek {
-    height: 80px;
+    height: 100px;
     padding: 20px 10px;
     width: 80%;
     }
     h2 {
       font-size: 35px;
+    }
+    p{
+      font-size: 20px;
     }
   
     .zaglowek-right {
@@ -58,20 +64,27 @@
 @media screen and (max-width: 767px) {
  
   .zaglowek {
-  height: 80px;
+  height: 120px;
   padding: 20px 10px;
   width: 99%;
   }
   h2 {
-    font-size: 30px;
+    font-size: 32px;
+  }
+  p{
+    font-size: 20px;
   }
 
   .zaglowek-right {
     flex-direction: column;
 
   }
-  .zaglowek-item {
-    font-size: 20px;
+  .zaglowek-item p{
+    font-size: 25px;
+  }
+  .select{
+    font-size: 19px;
+    line-height: 1.8;
   }
   
   .zaglowek-img {

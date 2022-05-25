@@ -9,28 +9,16 @@ body{
     font-family: 'Roboto', sans-serif;
    
 }
+.weather{
+    background: url('../assets/weather.jpg') center/cover fixed;
+}
 .sun{
     background: url('../assets/sun.jpg') center/cover fixed;
-}
-.sun-2{
-    background: url('../assets/sun2.jpg')center/cover fixed;
 }
 .rain{
     background: url('../assets/rain.jpg') center/cover fixed;
 }
-.rain-2{
-    background: url('../assets/rain2.jpg') center/cover fixed;
-}
 .cloud{
     background: url('../assets/cloud.jpg') center/cover fixed;
-}
-.cloud-2{
-    background: url('../assets/cloud2.jpg') center/cover fixed;
-}
-.thunderstorm{
-    background: url('../assets/thunderstorm.jpg') center/cover fixed;
-}
-.thunderstorm-2{
-    background: url('../assets/thunderstorm2.jpg') center/cover fixed;
 }
 

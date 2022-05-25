@@ -2,6 +2,8 @@
 
 const baseUrl = 'https://danepubliczne.imgw.pl/api/data/synop';
 const select = document.querySelector('#weatherCity');
+const body = document.querySelector('body');
+
 
 const getWeather = async city => {
 
@@ -9,6 +11,8 @@ const getWeather = async city => {
         const response = await fetch(baseUrl);
         const data = await response.json();
         return data;
+
+        
     }catch(err){
         console.error(err);
     }
@@ -29,7 +33,7 @@ getWeather().then(data => {
         contentMain.innerHTML = ""; // jak chcemy wyswietlić tylko jedną stacje
         
 
-        const selctedCity = select.selectedIndex - 1;
+        let selctedCity = select.selectedIndex-1;
         let h2 = document.createElement('h2');
         h2.className = "miasto";
         h2.innerHTML = `<img class="miasto-img" src="assets/icons/miasto.png" alt="Miasto"/>  ${data[selctedCity].stacja}`;
@@ -53,17 +57,19 @@ getWeather().then(data => {
         <p class="data"><img class="data-img" src="assets/icons/czas.png" alt="Czas"/>  ${data[selctedCity].godzina_pomiaru}:00</p>
         </div>
         </div>
-        
         `;
-      
-        // <td>${data[selctedCity].data_pomiaru}</td>
-        // <td>${data[selctedCity].godzina_pomiaru}</td>
-        // <td>${data[selctedCity].temperatura}</td>
-        // <td>${data[selctedCity].suma_opadu}</td>
-        // <td>${data[selctedCity].cisnienie}</td>
         contentMain.appendChild(h2);
         contentMain.appendChild(div);
 
+        if(data[selctedCity].suma_opadu > 0){
+            body.className = "rain";
+        }else if (data[selctedCity].suma_opadu == 0 && data[selctedCity].wilgotnosc_wzgledna > 85){
+            body.className = "cloud";
+        }else{
+            body.className = "sun";
+        }
+
+
     });
-   
+    
 })
